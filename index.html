@@ -6,43 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-    </script>
+    <script src="test.js"></script>
+
 </head>
 <body> 
     <div class="container">
         <div class="heading">Registration</div>
-        <form action="">
+        <form action="backend.php" name="myForm" onsubmit="return validate()" method="post">
             <div class="card-details">
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="name" class="details">Full Name</label>
-                    <input type="text" placeholder="Enter your name" id="name">
+                    <input type="text" placeholder="Enter your name" name="fname" id="name"><b><span class="error"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="Username" class="details">Username</label>
-                    <input type="text" placeholder="Enter your Username" id="Username">
+                    <input type="text" placeholder="Enter your Username" id="Username"><b><span class="error"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="email" class="details">Email</label>
-                    <input type="email" placeholder="Enter your Email" id="email">
+                    <input type="email" placeholder="Enter your Email" id="email"><b><span class="error"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="number" class="details">Phone number</label>
-                    <input type="number" placeholder="Enter your phone number" id="number">
+                    <input type="number" placeholder="Enter your phone number" id="number"><b><span class="error"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="password" class="details">Password</label>
-                    <input type="password" placeholder="Enter your name" id="password">
+                    <input type="password" placeholder="Enter your name" id="password"><b><span class="error"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="Cpassword" class="details">Confirm Password</label>
-                    <input type="pass" placeholder="Confirm Password" id="Cpassword">
+                    <input type="pass" placeholder="Confirm Password" id="Cpassword"><b><span class="error"></span></b>
                 </div>
             </div>
             <div class="circal-form">

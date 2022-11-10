@@ -1,25 +1,16 @@
-// const student ={ 
-//     fname : "Nagaprasad",
-//     lname : "Naik",
+function setError(id, error){
+    ele = document.getElementById(id).value;
+    ele.getElementsByClassName('error')[0].innerHTML = error;
+}
 
-//     set setName(name){
-//         return this.fname = name;
-//     },
-//     get getName(){
-//         return this.fname;
-//     }
-// }
-
-// console.log(student.getName);
-// student.setName = 'vivek';
-// console.log(student.getName);
-
-
-// let fname = prompt("enter name");
-// console.log(fname);
-// function fun(name){
-//     this.name = name;
-//     console.log(this);
-// }
-// var nm = new fun("val");
-// console.log(nm.name);
+function validate(){
+    // var fname = document.forms['myForm']['fname'].value;
+    var returnal = true;
+    var fname = document.getElementById("name").value;
+    // console.log(fname);
+    if(fname.length < 5){
+        setError("fname", "*The name is too short");
+        returnal = false;
+    }
+    return returnal;
+}
