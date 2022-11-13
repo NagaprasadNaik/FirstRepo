@@ -12,45 +12,46 @@
 <body> 
     <div class="container">
         <div class="heading">Registration</div>
-        <form action="backend.php" name="myForm" onsubmit="return validate()" method="post">
+        <form action="" name="myForm" onsubmit="return validate()">
             <div class="card-details">
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
-                    <label for="name" class="details">Full Name</label>
-                    <input type="text" placeholder="Enter your name" name="fname" id="name"><b><span class="error"></span></b>
+                    <label for="name" class="details">First Name</label>
+                    <input type="text" placeholder="Enter your Firstname" name="fname" id="fName" required><b><span id="firstnameError"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
-                    <label for="Username" class="details">Username</label>
-                    <input type="text" placeholder="Enter your Username" id="Username"><b><span class="error"></span></b>
+                    <label for="Username" class="details">Last name</label>
+                    <input type="text" placeholder="Enter your Lastname" id="lName" required><b><span id="lastnameError"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="email" class="details">Email</label>
-                    <input type="email" placeholder="Enter your Email" id="email"><b><span class="error"></span></b>
+                    <input type="email" placeholder="Enter your Email" id="email" required><b><span id="emailError"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="number" class="details">Phone number</label>
-                    <input type="number" placeholder="Enter your phone number" id="number"><b><span class="error"></span></b>
+                    <input type="number" placeholder="Enter your phone number" id="number" required><b><span id="numberError"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="password" class="details">Password</label>
-                    <input type="password" placeholder="Enter your name" id="password"><b><span class="error"></span></b>
+                    <input type="password" placeholder="Enter your name" id="password" required><b><span id="passwordError"></span></b>
                 </div>
                 <div class="card-box">
                     <!-- <span class="details">Full Name</span> -->
                     <label for="Cpassword" class="details">Confirm Password</label>
-                    <input type="pass" placeholder="Confirm Password" id="Cpassword"><b><span class="error"></span></b>
+                    <input type="password" placeholder="Confirm Password" id="cPassword" required><b><span id="cPassError"></span></b>
                 </div>
             </div>
             <div class="circal-form">
                 <span class="circal-title">Gender</span>
                 <div class="category">
-                    <input type="radio" name="gender">Male
-                    <input type="radio" name="gender">Female
-                    <input type="radio" name="gender">other
+                    <input type="radio" id="rd1" name="gender">Male
+                    <input type="radio" id="rd2" name="gender">Female
+                    <input type="radio" id="rd3" name="gender">other<br>
+                    <b><span id="genderError"></span></b>
                 </div>
             </div>
             <div class="button">
