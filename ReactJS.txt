@@ -1,0 +1,9 @@
+Virtual DOM?
+Virtual DOM is an abstraction of actual DOM, where components are the nodes. We can programmatically modify virtual DOM by updating components. These updates are internally handled by React and in turn, updated in actual DOM.
+As we all know, DOM manipulation is expensive, because it requires traversal through entire DOM tree to find the element to be updated. If these updates are very frequent, this leads to a poor performance of an application.
+What is React component?
+A React component is the fundamental unit of any React application. They are capable of encapsulating data and view as a single unit. These components can work in conjunction with each other.
+
+Components make code reusable, testing easy, and can take care of separation of concerns.
+
+Here, in ReactJS, components reside in virtual DOM and these components will be available as nodes in actual DOM.
