@@ -5,9 +5,9 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 // import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import Message from './Message.js'
+import Message from './Message'
 import { ClassNames } from '@emotion/react';
-
+import { useState } from 'react';
 
 
 
@@ -215,7 +215,7 @@ import { ClassNames } from '@emotion/react';
 //                   <h1>{this.state.price}</h1>
 //                   <button onClick={this.update}>Update</button>
 //           </React.Fragment>)}
-         
+
 // }
 
 
@@ -241,17 +241,87 @@ import { ClassNames } from '@emotion/react';
 //     }
 
 
-class App extends React.Component{
-    render(){
-        return (
-            <>
-            <Message name="Prasad" heroName="Batman">
-                <p>This is a children props</p>
-            </Message>
-            <Message name="Vivek" heroName="Superman" />
-            <Message name="Sharanu" heroName="Spiderman" />
-            </>
-        )
+// class App extends React.Component{
+//     render(){
+//         return (
+//             <>
+//             <Message name="Prasad" heroName="Batman">
+//                 <p>This is a children props</p>
+//             </Message>
+//             <Message name="Vivek" heroName="Superman" />
+//             <Message name="Sharanu" heroName="Spiderman" />
+//             </>
+//         )
+//     }
+// }
+
+// class App extends React.Component{
+//     constructor(){
+//         super();
+//         this.state = {
+//             name : "Nagaprasad"
+//         }
+//     }
+
+//     update = (value) =>{
+//         this.setState({name : value})
+//     }
+
+//     render(){
+//         return (
+//             <>
+//             <h3>{this.state.name}</h3>
+//             <Message name={this.state.name} update={this.update} />
+//             </>
+//         )
+//     }
+// }
+
+
+// const App = () =>{
+
+//     const [name, setName] = useState("Nagaprasad");
+//     const [age, setAge] = useState(0);
+
+//     const handlerClick = () =>{
+//         setName("Naik")
+//         setAge(age+1)
+//     }
+//     return (
+//         <div className='App'>
+//             <h3>{name}</h3>
+//             <h3>{age}</h3>
+//             <button onClick={handlerClick}>Change</button>
+//         </div>
+//     )
+// }
+
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            quantity: 0,
+            price: 0
+        }
     }
+
+    update = () => {
+        this.setState({ quantity: this.state.quantity+1 }, () => {
+            if (this.state.quantity == 5) {
+                this.setState({ price: 2000 - 100 })
+            }
+        })
+    }
+
+    render() {
+        return (<React.Fragment>
+            <h1>{this.state.quantity}</h1>
+            <h1>{this.state.price}</h1>
+            <button onClick={this.update}>Update</button>
+        </React.Fragment>)
+    }
+
 }
+
 export default App;

@@ -6,15 +6,37 @@ import React from 'react'
 //         <>
 //             <h3>Hello {props.name} a.k.a {props.heroName} </h3>
 //             <h3>{props.children}</h3>
-            
+
 //         </>
 //     )
 // }
 
-class message extends React.Component{
-    render(){
-        return <h1>Hello {this.props.name} a.k.a {this.props.heroName}</h1>
+// class Message extends React.Component{
+//     render(){
+//         return <h1>Hello {this.props.name} a.k.a {this.props.heroName}</h1>
+//     }
+// }
+
+class Message extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            name : "Naik"
+        }
+    }
+
+    handleClick = () =>{
+        this.props.update("Vivek")
+    }
+
+    render() {
+        return (
+            <>
+                <h3>{this.state.name}</h3>
+                <button onClick={this.handleClick}>Submit</button>
+            </>
+        )
     }
 }
 
-export default message;
+export default Message;
