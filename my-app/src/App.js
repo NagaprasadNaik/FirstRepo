@@ -5,6 +5,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 // import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import Message from './Message.js'
+import { ClassNames } from '@emotion/react';
 
 
 
@@ -183,27 +185,73 @@ import Typography from '@mui/material/Typography'
 //   }
 // }
 
-class App extends React.Component {
-  constructor() {
-          super()
-          this.state = {
-                  quantity: 0,
-                  price:0
-          }
-  }
-  update = () => {
-          this.setState({quantity:5})
-          if(this.state.quantity == 5) {
-              this.setState({price:2000-100})
-          }
-  }
-  render() {
-         return(<React.Fragment>
-                  <h1>{this.state.quantity}</h1>
-                  <h1>{this.state.price}</h1>
-                  <button onClick={this.update}>Update</button>
-          </React.Fragment>)}
-         
-}
 
+//more on update state --> state asynchronous
+// class App extends React.Component {
+//   constructor() {
+//           super()
+//           this.state = {
+//                   quantity: 0,
+//                   price:0
+//           }
+//   }
+//   update = () => {
+//           this.setState({quantity:5})
+//           if(this.state.quantity == 5) {
+//               this.setState({price:2000-100})
+//           }
+// update = () => {
+//         this.setState({quantity:5},()=>{
+//                 if(this.state.quantity == 5) {
+//                         this.setState({price:2000-100})
+//                 }
+//         })
+// }
+
+//   }
+//   render() {
+//          return(<React.Fragment>
+//                   <h1>{this.state.quantity}</h1>
+//                   <h1>{this.state.price}</h1>
+//                   <button onClick={this.update}>Update</button>
+//           </React.Fragment>)}
+         
+// }
+
+
+// class App extends React.Component{
+//         constructor(){
+//             super();
+//             this.state = {
+//                 message : "Welcome visitor!"
+//             }
+//         }
+//         handlerOnClick = () =>{
+//                 // this.state.message = "Thanks for subscribing...! "wrong way to change the value of state
+//                 this.setState({message : "Thanks for subscribing...!"});
+//         }
+//         render(){
+//             return (
+//                 <>
+//                     <h3>{this.state.message}</h3>
+//                     <button onClick={this.handlerOnClick}>Subscribe</button> 
+//                 </>
+//             )
+//         }
+//     }
+
+
+class App extends React.Component{
+    render(){
+        return (
+            <>
+            <Message name="Prasad" heroName="Batman">
+                <p>This is a children props</p>
+            </Message>
+            <Message name="Vivek" heroName="Superman" />
+            <Message name="Sharanu" heroName="Spiderman" />
+            </>
+        )
+    }
+}
 export default App;

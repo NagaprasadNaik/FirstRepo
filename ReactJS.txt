@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 What is React?
 ReactJS, a JavaScript library for creating user interfaces,makes the development of UI components easy and modular.
 
@@ -20,7 +20,79 @@ D:\>npm install -g create-react-app
 D:\>create-react-app my-app
 ​​​​​​​​​​​​​​If you do not want to install create-react-app then you can use the below command to create a React application
 After successful compilation, the application will be loaded in the browser at the port "http://localhost:3000" as shown below.
-=======
+
+=========================
+Files
+
+Purpose
+
+node_modules
+
+All the node module dependencies are created in this folder
+
+public
+
+This folder contains the public static assets of the application
+
+public/index.html
+
+This is the first page that gets loaded when you run the application
+
+src
+
+All application related files/folders are created in this folder
+
+src/index.js
+
+This is the entry point of the application
+
+package.json
+
+Contains the dependencies of the React application
+
+ 
+=============================
+JSX has been introduced in React to create elements that are very easy to read and write, which makes the component's code simple and understandable.
+JSX is a special syntax introduced in ReactJS to write elements of components. It is syntactically identical to HTML and hence it can be easily read and written. Code written using JSX helps in visualizing the DOM structure easily.
+
+import React from 'react'
+function App () {
+    return <h1>Hello World</h1>
+}
+export default App;
+As the browser does not understand JSX code, this gets converted to JavaScript using the plugins of the babel.
+=============================================================================
+JavaScript expressions to be evaluated should be wrapped within curly braces as follows:
+
+<h1> { Expression to be evaluated } </h1>
+Content which has to be displayed as is will be written in double quotes, wrapped within curly braces as follows:
+<h1> {" Content to be displayed "} </h1>
+Specifying attributes' expression: 
+
+function App() {
+  let highlight = {
+    color: "blue",
+    backgroundColor: "grey",
+  };
+  return (
+    <>
+      <h1 style={highlight}>Welcome to React</h1>
+    </>
+  );
+}
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
 Virtual DOM?
 Virtual DOM is an abstraction of actual DOM, where components are the nodes. We can programmatically modify virtual DOM by updating components. These updates are internally handled by React and in turn, updated in actual DOM.
 As we all know, DOM manipulation is expensive, because it requires traversal through entire DOM tree to find the element to be updated. If these updates are very frequent, this leads to a poor performance of an application.
@@ -30,4 +102,3 @@ A React component is the fundamental unit of any React application. They are cap
 Components make code reusable, testing easy, and can take care of separation of concerns.
 
 Here, in ReactJS, components reside in virtual DOM and these components will be available as nodes in actual DOM.
->>>>>>> 73470f5a47dc1cebe6911dc9673906516ee0cc60
