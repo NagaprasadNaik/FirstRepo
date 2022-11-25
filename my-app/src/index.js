@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Message from './Message';
+// import Message from './Message';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('ROOT'));
 // root.render(
@@ -12,6 +13,14 @@ const root = ReactDOM.createRoot(document.getElementById('ROOT'));
 //       <App />
 //     </Message>
 
+//   </React.StrictMode>
+// );
+
+// root.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
 //   </React.StrictMode>
 // );
 

@@ -1,15 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 // import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import Message from './Message'
-import { ClassNames } from '@emotion/react';
-import { useState } from 'react';
-import PostList from './PostList';
-
+// import Typography from '@mui/material/Typography'
+// import Message from './Message'
+// import { ClassNames } from '@emotion/react';
+// import { useState } from 'react';
+// import PostList from './PostList';
+// import ReactForm from './ReactForm'
+// import OrderComponent from './Components/OrderComponent';
 
 
 
@@ -457,7 +458,7 @@ import PostList from './PostList';
 //     }
 //     render() {
 //         return (
-           
+
 //             <form onSubmit={this.handlerSubmit}>
 //             <div>
 //                 <label>Username</label>
@@ -474,48 +475,48 @@ import PostList from './PostList';
 //                 <button type="submit">Submit</button>
 //             </div>
 //             </form>
-        
+
 //         );
 //     }
 // }
 
-class App extends React.Component {
-    constructor(){
-        super()
-        this.state ={
-            username : "",
-            password : ""
-        }
-    }
-    handlerOnChange = (e)=>{
-        const name = e.target.name
-        const value = e.target.value
-        this.setState({[name] : value})
-    }
+// class App extends React.Component {
+//     constructor(){
+//         super()
+//         this.state ={
+//             username : "",
+//             password : ""
+//         }
+//     }
+//     handlerOnChange = (e)=>{
+//         const name = e.target.name
+//         const value = e.target.value
+//         this.setState({[name] : value})
+//     }
 
-    handlerSubmit = (event) =>{
-        alert(`${this.state.username} ${this.state.password} `)
-        event.preventDefault()
-    }
-    render() {
-        return (
-            <>
-            <form onSubmit={this.handlerSubmit}>
-            <div>
-                <label>Username</label>
-                <input type="text" name="username" value={this.state.username} onChange={this.handlerOnChange} placeholder="username"></input>
-            </div>
-            <div><label>Password</label>
-            <input type="password" name="password" value={this.state.password} onChange={this.handlerOnChange} placeholder="password"></input>
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-            </form>
-            </>
-        );
-    }
-}
+//     handlerSubmit = (event) =>{
+//         alert(`${this.state.username} ${this.state.password} `)
+//         event.preventDefault()
+//     }
+//     render() {
+//         return (
+//             <>
+//             <form onSubmit={this.handlerSubmit}>
+//             <div>
+//                 <label>Username</label>
+//                 <input type="text" name="username" value={this.state.username} onChange={this.handlerOnChange} placeholder="username"></input>
+//             </div>
+//             <div><label>Password</label>
+//             <input type="password" name="password" value={this.state.password} onChange={this.handlerOnChange} placeholder="password"></input>
+//             </div>
+//             <div>
+//                 <button type="submit">Submit</button>
+//             </div>
+//             </form>
+//             </>
+//         );
+//     }
+// }
 
 // import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -552,7 +553,202 @@ class App extends React.Component {
 // export default Login;
 
 
+// context not working
+// import {UserProvider} from './Components/Context'
+// import CompC from './Components/CompC';
+// class App extends React.Component{
+//     render(){
+//         // return <ReactForm />
+//         // return <OrderComponent />
+//         return (
+//         <UserProvider username="Nagaprasad">
+//         <CompC  />
+//         </UserProvider>
+//         )
+//     }
+// }
+
+
+
+
+// Routes in React
+// import {Home} from './Components/Home'
+// import About from './Components/About';
+// import Contact from './Components/Contact';
+// import BooksList from './Components/BooksList';
+// import Book from './Components/Book';
+// import { Routes, Route , Link} from 'react-router-dom';
+// import { Error } from './Components/NoteFound';
+
+
+// class App extends React.Component {
+//     render() {
+//         return (
+//             <>
+//             <nav>
+//                 <ul>
+//                     <li>
+//                         <Link to="/">Home</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/About">AboutUs</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/Contact">ContactUs</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/BooksList">Books</Link>
+//                     </li>
+//                 </ul>
+//             </nav>
+//             <Routes>
+//                 <Route path="/" element={<Home />} />
+//                 <Route path="/Home" element={<Home />} />
+//                 <Route path="/About" element={<About />} />
+//                 <Route path="/Contact" element={<Contact />} />
+//                 <Route path="/BooksList" >
+//                     <Route index element={<BooksList />} />
+//                     <Route path=":id" element={<Book />} />
+//                 </Route>
+//                 {/* <Route path="/BooksList" element={<BooksList />} />
+//                 <Route path="/BooksList/:id" element={<Book />} /> */}
+//                 <Route path="*" element={<Error />} />
+//             </Routes>
+//             </>
+//         )
+//     }
+// }
+
+
+// **********************   useState hook in React   **********************
+// import {useState} from 'react'
+
+// function App(){
+//     const [count, setCount] = useState(0)
+//     const [theme, setTheme] = useState(0)
+
+//     const increament = () => {
+//         setCount(count + 1)
+//     }
+
+//     const decreament = () => {
+//         setCount(count => count -1)
+//         setCount(count => count -1)
+//     }
+
+//     return (
+//         <>
+//             <button style={{width: '75px'} } onClick={decreament}><b>-</b></button>
+//             <span style={{width: '75px'}}>{count}</span>
+//             <button style={{width: '75px'}} onClick={increament}><b>+</b></button>
+//         </>
+//     )
+//  }
+
+// import {useState, createContext} from 'react'
+// import CompC from './Components/CompC';
+// import { createContext } from "react"
+
+// export const NewContext = createContext()
+
+// function App(){
+//     // const [darkTheme, setDarkTheme] = useState(true)
+
+//     // const toggleTheme = () =>{
+//     //     setDarkTheme(preDarkTheme => !preDarkTheme)
+//     //     console.log(darkTheme)
+//     // }
+
+
+//     return (
+//         <>
+//         <NewContext.Provider value='red'>
+//         <div>
+//             {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
+//             <CompC />
+//         </div>
+//         </NewContext.Provider>
+//         </>
+//     )
+// }
+
+
+
+// **********************   useContext hook in React   **********************
+// import CompF from './Components/CompF';
+// import { createContext } from "react"
+
+// export const NewContext = createContext()
+
+// function App(){
+//     return (
+//         <>
+//         <NewContext.Provider value='blue'>
+//         {/* <div> */}
+//             <CompF />
+//         {/* </div> */}
+//         </NewContext.Provider>
+//         </>
+//     )
+// }
+
+
+
+//useReducer hook in react
+// import { useReducer, useState } from 'react';
+
+// function reducer(state, action){
+//     console.log(action.type)
+//     switch(action.type)
+//     {
+//         case 'increament': return {count : state.count + 1}
+//         case 'decreament': return {count : state.count - 1}
+//         default : return state
+
+//     }
+// }
+
+
+// function App(){
+//     const [count, setCount] = useState(0)
+//     const [state, dispatch] = useReducer(reducer, {count : 0})
+
+//     const increment = () =>{
+//         // setCount(count + 1)
+//         dispatch({type : 'increament'})
+//     }
+
+//     const decreament = () =>{
+//         // setCount(count - 1)
+//         dispatch({type : 'decreament'})
+//     }
+
+//     return (<>
+//             <button onClick={decreament}>-</button>
+//             <span>{state.count}</span>
+//             <button onClick={increment}>+</button>
+//     </>
+//     )
+// }
+import DocumentTitleOne from './Components/DocumentTitle1'
+import DocumentTitleTwo from './Components/DocumentTitle2'
+function App(){
+
+    return (
+        <>
+            <DocumentTitleOne />
+            <DocumentTitleTwo />
+        </>
+    )
+}
+
 export default App;
+
+
+
+
+
+
 
 
 

@@ -44,3 +44,16 @@
   width: 100px;
   height: 1 00px;
 } */
+nav ul{
+  background-color: black;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height : 18vh;
+}
+
+nav ul li{
+  text-decoration: none;
+  color: Orange;
+  margin : 0 20px;
+}
