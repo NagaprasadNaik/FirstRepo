@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import CakeContainer from './redux/CakeContainer';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import Button from 'react-bootstrap/Button'
 // import Button from '@mui/material/Button'
@@ -645,19 +646,6 @@ import React from 'react';
 //     )
 //  }
 
-// import {useState, createContext} from 'react'
-// import CompC from './Components/CompC';
-// import { createContext } from "react"
-
-// export const NewContext = createContext()
-
-// function App(){
-//     // const [darkTheme, setDarkTheme] = useState(true)
-
-//     // const toggleTheme = () =>{
-//     //     setDarkTheme(preDarkTheme => !preDarkTheme)
-//     //     console.log(darkTheme)
-//     // }
 
 
 //     return (
@@ -694,7 +682,7 @@ import React from 'react';
 
 
 
-//useReducer hook in react
+//**********************useReducer hook in react**********************
 // import { useReducer, useState } from 'react';
 
 // function reducer(state, action){
@@ -730,17 +718,42 @@ import React from 'react';
 //     </>
 //     )
 // }
-import DocumentTitleOne from './Components/DocumentTitle1'
-import DocumentTitleTwo from './Components/DocumentTitle2'
-function App(){
 
-    return (
-        <>
-            <DocumentTitleOne />
-            <DocumentTitleTwo />
-        </>
-    )
-}
+
+// import DocumentTitleOne from './Components/DocumentTitle1'
+// import DocumentTitleTwo from './Components/DocumentTitle2'
+// function App(){
+
+//     return (
+//         <>
+//             <DocumentTitleOne />
+//             <DocumentTitleTwo />
+//         </>
+//     )
+// }
+
+// import { Provider } from 'react-redux'
+// import store from './redux/Store';
+// function App() {
+//     return (
+//         <Provider store={store}>
+//         <div className='App'>
+//                 <CakeContainer />
+//         </div>
+//         </Provider>
+//     )
+// }
+import {useSelector} from 'react-redux'
+ 
+ function App() {
+  const counter = useSelector(store => store.counter)
+   return (
+     <div>
+       <h2>Hello {counter}</h2>
+     </div>
+   )
+ }
+ 
 
 export default App;
 

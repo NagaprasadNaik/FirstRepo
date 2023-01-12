@@ -1,15 +1,16 @@
-import {useState , useEffect} from 'react'
+import { useState } from 'react'
+import { useCustomHook } from './UseCustomHook'
 
-function DocumentTitleTwo(){
-    const [count , setCount] = useState(0)
+function DocumentTitleTwo() {
+    const [count, setCount] = useState(0)
 
-    useEffect(() => {
-        document.title = `Count ${count}`
-    })
     
+    const value = useCustomHook(count)
+
     return (
         <>
-            <button onClick={() => {setCount(count+1)}}>count - {count}</button>
+            <button onClick={() => { setCount(count + 1) }}>count - {count}</button>
+            <div>{value}</div>
         </>
     )
 }
